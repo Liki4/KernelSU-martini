@@ -145,7 +145,7 @@ long ksu_strncpy_from_user_nofault(char *dst, const void __user *unsafe_addr,
 long ksu_strncpy_from_user_nofault(char *dst, const void __user *unsafe_addr,
 				   long count)
 {
-	return strncpy_from_unsafe_user(dst, unsafe_addr, count);
+	return strncpy_from_user_nofault(dst, unsafe_addr, count);
 }
 #else
 // Copied from: https://elixir.bootlin.com/linux/v4.9.337/source/mm/maccess.c#L201
